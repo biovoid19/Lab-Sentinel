@@ -141,9 +141,6 @@ CREATE TABLE asociaciones (
 | `id_usuario` | `string` |
 | `fecha_hora` | `datetime` |
 
-## Resultados
-A continuación, podrá verse una vista previa del sistema, del ensamble del circuito.
- 
 
 # Créditos
 Desarrollado por:
