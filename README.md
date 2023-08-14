@@ -7,7 +7,7 @@ Los sistemas de control de acceso con reconocimiento de tarjeta RFID, son una te
 El lector RFID es el dispositivo que emite una señal de radiofrecuencia para activar la tarjeta RFID cercana y recibir la información almacenada en el chip. Una vez que la tarjeta responde a la señal, se establece una comunicación entre la tarjeta y el lector, permitiendo la transferencia de datos de identificación y autenticación. El sistema puede ser configurado para permitir o denegar el acceso según los privilegios y permisos asignados a cada tarjeta.
 
 ## Propósito.
-El propósito de este proyecto es mantener un ambiente seguro y controlado, se implementaría un sistema de control de acceso con reconocimiento de tarjeta RFID en varias áreas de la universidad, como edificios académicos, biblioteca y laboratorios.
+El proposito de este proyecto es mantener un ambiente seguro y controlado, se implementaría un sistema de control de acceso con reconocimiento de tarjeta RFID en varias áreas de la unniversidad , como edificios académicos, biblioteca y laboratorios.
 
 ## Objetivos.
 - Implementación de Infraestructura RFID:
@@ -36,13 +36,13 @@ Para realizar el prototipo se necesitan los siguientes materiales:
 ### Material de referencia
 En los siguientes enlaces puedes encontrar los enlaces en la plataforma de edu.codigoiot.com que te permitirán realizar las configuraciones necesarias 
 
-- [Instalación de Raspberry Pi OS en Raspberry Pi 4](https://edu.codigoiot.com/mod/subcourse/view.php?id=3924)
+- [Instalación de Raspbery Pi OS en Raspberry Pi 4](https://edu.codigoiot.com/mod/subcourse/view.php?id=3924)
 - [Lectura y escritura de tarjetas RFID con Raspberry Pi](https://edu.codigoiot.com/mod/subcourse/view.php?id=3927)
 
-## Instalación.
-### Para ejecutar la aplicación de la cerradura, instala las dependencias.
+## Instalacion.
+### Para ejecutar la aplicacion de la cerradura instala las dependencias.
 
- Instala el framework Flask para crear la aplicación web en Python.
+ Instala el framework Flask para crear la aplicacion web en Python.
  ```sh
 pip install flask
 ```
@@ -50,7 +50,7 @@ pip install flask
  ```sh
 pip install flask-sqlalchemy
 ```
-  Integra Marshmallow en Flask para manejar la serialización y de serialización de datos en aplicaciones web.
+  Integra Marshmallow en Flask para manejar la serialización y deserialización de datos en aplicaciones web.
   ```sh 
 pip install flack-marshmallow
 ```
@@ -63,21 +63,21 @@ pip install marshmallow-sqlalchemy
 pip install pymysql
 ```
 
-Para poder iniciar la aplicación.
+Para poder iniciar la aplicacion.
 ```sh
-python 
+ControlAccesoLeds.py
 python app.py
 ```
-> Nota: `lectira.py` es requerido para poder leer los RFID.
+> Nota: `ControlAccesoLeds.py` es requerido para poder leer los RFID.
 > Nota: `app.py` es requerido para poder cuardar la informacion en la base de datos.
 
-### Instalación de Mysql.
+### instalacion de Mysql.
 ```sh
 Install MySQL: sudo apt install mariadb-server php-mysql -y
 Create User Query: CREATE USER ‘admin’@’localhost’ IDENTIFIED BY ‘password’;
-Grant User Permissions: GRANT ALL PRIVILEGES ON . to ‘admin’@’localhost’ WITH GRANT OPTION;
+Grant User Permissions: GRANT ALL PRIVILEGES ON . to ‘admin’@’localhost’ WITH GRANT OPTION;
 ```
-#### Instalación de phpMyAdmin.
+#### instalacion de phpMyAdmin.
 ```sh
 Install PHPMyAdmin: sudo apt-get install phpmyadmin
 Edit Apache Config: sudo nano /etc/apache2/apache2.conf
@@ -121,13 +121,13 @@ CREATE TABLE asociaciones (
 ## Rutas de la API
 #### Url predeterminada del api
 ```sh
-127.0.0.1:500
+127.0.0.1:5000
 ```
 #### obtener lista usuarios
 ```http
   GET /tarjetas
 ```
-| Parámetro | Type     |
+| Parametro | Type     |
 | :-------- | :------- |
 | `id_usuario` | `string` |
 | `id_tarjeta` | `string` | 
@@ -136,16 +136,22 @@ CREATE TABLE asociaciones (
 ```http
   POST /registro_acceso
  ```
- | Parámetro | Type     |
+ | Parametro | Type     |
 | :-------- | :------- |
 | `id_usuario` | `string` |
 | `fecha_hora` | `datetime` |
 
-
+## Resultados
+A continuación, podra verse una vista previa del sistema, del ensamble del circuito.
+ 
+ ![App Screenshot](https://raw.githubusercontent.com/biovoid19/Lab-Sentinel/main/img/img.jpg)
+ ![App Screenshot](https://raw.githubusercontent.com/biovoid19/Lab-Sentinel/main/img/control.png)
+ ![App Screenshot](https://raw.githubusercontent.com/biovoid19/Lab-Sentinel/main/img/phpmyadmin2.png)
+  
 # Créditos
 Desarrollado por:
 - [@Victor Galindo](https://www.github.com/biovoid19)
-- [@Raul Rodríguez](https://www.github.com/RaulRodriguez050221)
+- [@Raul Rodriguez](https://www.github.com/RaulRodriguez050221)
 - [@Carlos Flores](https://www.github.com/carlossf12)
 
 ## License
